@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>BORE DRILL LENGTH CALCULATOR</title>
+
+    <link rel="stylesheet" href="style.css" />
+    <!-- <script src="script.js" defer></script> -->
+    <link rel="icon" type="image/png" href="icon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+      crossorigin="anonymous"
+    />
+   
+     </head>
+  <body>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Bootsrap Carousel  -->
+    <div
+      id="carouselExampleIndicators"
+      class="carousel slide"
+      data-bs-ride="carousel"
+    >
+      <!-- Indicators -->
+      <div class="carousel-indicators">
+        <button
+          type="button"
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide-to="0"
+          class="active"
+            ></button>
+        <button
+          type="button"
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide-to="1"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide-to="2"
+        ></button>
+      </div>
+
+      <!-- Carousel items -->
+      <!-- <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img
+            src="images/mazak_machine1.jpg"
+            class="d-block w-100 height 20px"
+            alt="First Slide" 
+          />
+        </div>
+        <div class="carousel-item">
+          <img
+            src="images/mazak_machine2.jpeg"
+            class="d-block w-100 height=20px"
+            alt="Second Slide"
+          />
+        </div>
+        <div class="carousel-item">
+          <img
+            src="images/mazak_machine3.jpeg"
+            class="d-block w-100 height=20px"
+            alt="Third Slide"
+          />
+        </div>
+      </div> -->
+
+      <!-- Controls -->
+      <!-- <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#carouselExampleIndicators"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon"></span>
+      </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#carouselExampleIndicators"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon"></span>
+      </button>
+    </div> -->
+
+    <!-- SECTION: Bore drill Length Calculator -->
+
+    <h1>Bore drill Length Calculator</h1>
+    <br />
+    <h2><strong>Machine </strong><br /></h2>
+    <br />
+    <!-- dropdown to select machine -->
+    <form id="myform" class="form_grid">
+      <select id="machine" name="machine">
+        <option value="630">630</option>
+        <option value="1060">1060</option>
+        <option value="1550">1550</option></select
+      ><br /><br />
+      <h2><strong>Enter the Values</strong></h2>
+      <br />
+
+      <label for="Z_offset"
+        >Z offset(#790)<input
+          type="number"
+          id="Z_offset"
+          name="Z_offset"
+          step="any"
+          required
+      /></label>
+      <br />
+      <label for="Hub_length"
+        >Hublength(#810)
+        <input type="number" id="Hub_length" name="Hub_length" step="any" required
+      /></label>
+      <br />
+      <label for="datum"
+        >Datum Z(#841) <input type="number" id="datum" name="datum" step="any" required
+      /></label>
+      <br />
+      <label for="Boss_Bottom"
+        >Boss Bottom(#793)<input
+          type="number"
+          id="Boss_Bottom"
+          name="Boss_Bottom"
+          step="any"
+          required
+      /></label>
+      <br />
+      <label for="drill_thru_length"
+        >Drill thru length
+        <input
+          type="number"
+          id="drill_thru_length"
+          name="drill_thru_length"
+          step="any"
+          required
+      /></label>
+      <br />
+      <label for="Face_stock"
+        >Face stock
+        <input
+          type="number"
+          id="Face_stock"
+          name="Face_stock"
+          step="any"
+          required
+        /> </label
+      ><br />
+
+      <br /><br />
+      <button type="submit">Calculate</button>
+    </form>
+    <br />
+      <!-- Output Section -->
+   <div id="output" class="mt-4">
+  <div id="result" class="alert alert-info" role="alert">
+  </div>
+</div>
+    <script src="script.js"></script>
+  </body>
+</html>
